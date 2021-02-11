@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<style>
+			@media all and (min-width: 1001px){
+				
+
+			}
+			@media all and (max-width: 1000px){
+				.Book-Open{
+					display: flex;
+					flex-direction: column;
+					border: none;
+				}
+				.Topic, .Container{
+					border: none;
+					border-radius: 0px;
+				}
+				.Topic{
+					margin: 0px;
+					width: 100%;
+				}
+				.Container{
+					margin-left: auto;
+					margin-right: auto;
+				}
+				body{
+					margin: 0px;
+					padding: 0px;
+				}
+				.Topic ul{
+					padding: 0px;
+					margin: 0px;
+					margin-left: auto;
+					margin-right: auto;
+					height: 250px;
+				}
+			}
+			@media all and (max-width: 600px){
+				.Book-Open{
+					display: flex;
+					flex-direction: column;
+					border: none;
+				}
+				.Topic, .Container{
+					border: none;
+					border-radius: 0px;
+					
+				}
+				.Container{
+					margin: 0px;
+				}
+				.Topic{
+					margin: 0px;
+					width: 450px;
+					padding: 20px;
+				}
+				body{
+					margin: 0px;
+					padding: 0px;
+				}
+				.Topic ul{
+					padding: 0px;
+					margin: 0px;
+					margin-left: auto;
+					margin-right: auto;
+					height: 250px;
+				}
+				
+			}
+		</style>
+	</head>
+	<body id="Body">
+		<div class="Book-Open">
+			<div class="Topic">
+				<img src="Image/Home.png" id="Home-Link">
+				<h1>Healthy Activities</h1>
+				<ul>
+					<li id="Topic1" style="background-color: white; color: black;">What is Healthy Activities?</li>
+					<li id="Topic2">How Much Physical Activity?</li>
+                    <li id="Topic3">Example of Healthy Activities</li>
+				</ul>			
+			</div>
+
+			<div class="Container">
+				<div class="Topic-Container">
+					<div id="Topic1-Container">
+						<div id="Topic1-Subtopic1">
+							<h1>What is Healthy Activites?</h1>
+							<p>
+							WHO defines physical activity as any bodily movement produced by skeletal muscles that requires energy expenditure - including activities undertaken while working, playing, carrying out household chores, travelling, and engaging in recreational pursuits.
+							</p>
+
+							<p>
+								The term "physical activity" should not be confused with "exercise", which is a subcategory of physical activity that is planned, structured, repetitive, and aims to improve or maintain one or more components of physical fitness. Beyond exercise, any other physical activity that is done during leisure time, for transport to get to and from places, or as part of a person’s work, has a health benefit. Further, both moderate- and vigorous-intensity physical activity improve health.
+							</p>
+						</div>
+					</div>
+
+					<div id="Topic2-Container" style="display: none;opacity: 0;">
+						<div id="Topic2-Subtopic1">
+							<h1>How much Physical Activity?</h1>
+                            <p>
+                            Children and adolescents aged 5-17 years:
+
+                            <br>1. Should do at least 60 minutes of moderate to vigorous-intensity physical activity daily.
+                            <br>2. Physical activity of amounts greater than 60 minutes daily will provide additional health benefits.
+                            <br>3. Should include activities that strengthen muscle and bone, at least 3 times per week.
+                            </p>
+
+                           <p> 
+                                Adults aged 18-64 years:
+
+                                <br>1. Should do at least 150 minutes of moderate-intensity physical activity throughout the week, or do at least 75 minutes of vigorous-intensity physical activity throughout the week, or an equivalent combination of moderate- and vigorous-intensity activity.
+                                <br>2. For additional health benefits, adults should increase their moderate-intensity physical activity to 300 minutes per week, or equivalent.
+                                <br>3. Muscle-strengthening activities should be done involving major muscle groups on 2 or more days a week.
+                            </p>
+                            <p>
+                                Adults aged 65 years and above:
+
+                                <br>1.. Should do at least 150 minutes of moderate-intensity physical activity throughout the week, or at least 75 minutes of vigorous-intensity physical activity throughout the week, or an equivalent combination of moderate- and vigorous-intensity activity.
+                                <br>2. For additional health benefits, they should increase moderate-intensity physical activity to 300 minutes per week, or equivalent.
+                                <br>3. Those with poor mobility should perform physical activity to enhance balance and prevent falls, 3 or more days per week.
+                                <br>4. Muscle-strengthening activities should be done involving major muscle groups, 2 or more days a week.
+                        </p>
+						</div>
+					</div>
+
+					<div id="Topic3-Container" style="display: none;opacity: 0;">
+						<div id="Topic3-Subtopic1">
+							<h1>Example of Healthy Activities</h1>
+							<p>
+                                Moderate physical activities include:
+
+                                <br> 1. Walking briskly (about 3½ miles per hour)
+                                <br> 2. Bicycling (less than 10 miles per hour)
+                                <br> 3. General gardening (raking, trimming shrubs)
+                                <br> 4. Dancing
+                                <br> 5. Golf (walking and carrying clubs)
+                                <br> 6. Water aerobics
+                                <br> 7. Canoeing
+                                <br> 8. Tennis (doubles)                    
+                            </p>
+
+                            <p>
+                                Vigorous physical activities include: 
+
+                                <br> 1. Running/jogging (5 miles per hour)
+                                <br> 2. Walking very fast (4½ miles per hour)
+                                <br> 3. Bicycling (more than 10 miles per hour)
+                                <br> 4. Heavy yard work, such as chopping wood
+                                <br> 5. Swimming (freestyle laps)
+                                <br> 6. Aerobics
+                                <br> 7. Basketball (competitive)
+                                <br> 8. Tennis (singles)
+                            </p>
+						</div>
+					</div>	
+				</div>				
+			</div>
+		</div>
+	</body>
+
+	<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
+
+    <script type="text/javascript">
+	//METHOD
+		function TopicShow(topicX) {
+			$(topicX).show().animate({opacity:'5'},5000);
+		}
+
+		function SelectedTopic(SelectedTopic) {
+			$(SelectedTopic).css({
+				'backgroundColor':'white',
+				'color':'black'
+			})
+		}
+
+		function DeselectedTopic(DeselectedTopic) {
+			$(DeselectedTopic).css({
+				'backgroundColor':'#009883',
+    			'color':'white'
+			})
+		}
+
+	// Click The Topic
+    	$("#Topic1").click(()=>{
+       		TopicShow('#Topic1-Container');
+
+    		$('#Topic3-Container').hide();
+    		$('#Topic2-Container').hide();
+
+    		SelectedTopic('#Topic1');
+
+    		DeselectedTopic('#Topic2');
+    		DeselectedTopic('#Topic3');
+    	})
+
+    	$("#Topic2").click(()=>{
+    		TopicShow('#Topic2-Container');
+    		
+    		$('#Topic1-Container').hide();
+    		$('#Topic3-Container').hide();
+
+    		SelectedTopic('#Topic2');
+
+    		DeselectedTopic('#Topic1');
+    		DeselectedTopic('#Topic3');
+    	})
+
+    	$("#Topic3").click(()=>{
+			TopicShow('#Topic3-Container');
+
+    		$('#Topic1-Container').hide();
+    		$('#Topic2-Container').hide();
+
+    		SelectedTopic('#Topic3');
+
+    		DeselectedTopic('#Topic1');
+    		DeselectedTopic('#Topic2');
+    	})
+
+    	$('#Home-Link').click(()=>{
+    		$('#Body').load("index.html");
+    	})
+    </script>
+</html>

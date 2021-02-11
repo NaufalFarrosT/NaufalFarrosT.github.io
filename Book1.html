@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<style>
+			@media all and (min-width: 1001px){
+				
+
+			}
+			@media all and (max-width: 1000px){
+				.Book-Open{
+					display: flex;
+					flex-direction: column;
+					border: none;
+				}
+				.Topic, .Container{
+					border: none;
+					border-radius: 0px;
+				}
+				.Topic{
+					margin: 0px;
+					width: 100%;
+				}
+				.Container{
+					margin-left: auto;
+					margin-right: auto;
+				}
+				body{
+					margin: 0px;
+					padding: 0px;
+				}
+				.Topic ul{
+					padding: 0px;
+					margin: 0px;
+					margin-left: auto;
+					margin-right: auto;
+					height: 250px;
+				}
+			}
+			@media all and (max-width: 600px){
+				.Book-Open{
+					display: flex;
+					flex-direction: column;
+					border: none;
+				}
+				.Topic, .Container{
+					border: none;
+					border-radius: 0px;
+					
+				}
+				.Container{
+					margin: 0px;
+				}
+				.Topic{
+					margin: 0px;
+					width: 450px;
+					padding: 20px;
+				}
+				body{
+					margin: 0px;
+					padding: 0px;
+				}
+				.Topic ul{
+					padding: 0px;
+					margin: 0px;
+					margin-left: auto;
+					margin-right: auto;
+					height: 250px;
+				}
+				
+			}
+		</style>
+	</head>
+	<body id="Body">
+		<div class="Book-Open">
+			<div class="Topic">
+				<img src="Image/Home.png" id="Home-Link">
+				<h1>Sport</h1>
+				<ul>
+					<li id="Topic1" style="background-color: white; color: black;">What is Healthy Sport?</li>
+					<li id="Topic2">History</li>
+					<li id="Topic3">Example of Healthy Sport</li>
+				</ul>			
+			</div>
+
+			<div class="Container">
+				<div class="Topic-Container">
+					<div id="Topic1-Container">
+						<div id="Topic1-Subtopic1">
+							<h1>What is Healthy Sport?</h1>
+							<p>
+							Sport is fun, provides health benefits and most can participate.
+							For some, the benefits of regular physical activity is improved fitness, and for others it's the positive effects on their medical condition.
+							</p>
+
+							<p>
+								A number of factors influence the way in which sport and physical activity impacts on health in different populations. Sport and physical activity in itself may not directly lead to benefits but, in combination with other factors, can promote healthy lifestyles. There is evidence to suggest that changes in the environment can have a significant impact on opportunities for participation and in addition, the conditions under which the activity is taking place can heavily impact on health outcomes. Elements that may be determinants on health include nutrition, intensity and type of physical activity, appropriate footwear and clothing, climate, injury, stress levels and sleep patterns.
+
+								Sport and physical activity can make a substantial contribution to the well-being of people in developing countries. Exercise, physical activity and sport have long been used in the treatment and rehabilitation of communicable and non-communicable diseases. Physical activity for individuals is a strong means for the prevention of diseases and for nations is a cost-effective method to improve public health across populations.
+							</p>
+						</div>
+					</div>
+
+					<div id="Topic2-Container" style="display: none;opacity: 0;">
+						<div id="Topic2-Subtopic1">
+							<h1>History</h1>
+							<p>Although research interest on physical activity and health dates back to the 1950s, the breakthrough in the scientific evidence on health benefits of physical activity largely took place during the 1980s and 1990s. There is an overwhelming amount of scientific evidence on the positive effects of sport and physical activity as part of a healthy lifestyle. The positive, direct effects of engaging in regular physical activity are particularly apparent in the prevention of several chronic diseases, including: cardiovascular disease, diabetes, cancer, hypertension, obesity, depression and osteoporosis.</p>
+						</div>
+					</div>
+
+					<div id="Topic3-Container" style="display: none;opacity: 0;">
+						<div id="Topic3-Subtopic1">
+							<h1>Example of Healthy Sport</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>	
+				</div>				
+			</div>
+		</div>
+	</body>
+
+	<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
+
+    <script type="text/javascript">
+	//METHOD
+		function TopicShow(topicX) {
+			$(topicX).show().animate({opacity:'5'},5000);
+		}
+
+		function SelectedTopic(SelectedTopic) {
+			$(SelectedTopic).css({
+				'backgroundColor':'white',
+				'color':'black'
+			})
+		}
+
+		function DeselectedTopic(DeselectedTopic) {
+			$(DeselectedTopic).css({
+				'backgroundColor':'#009883',
+    			'color':'white',
+			})
+		}
+
+	// Click The Topic
+    	$("#Topic1").click(()=>{
+       		TopicShow('#Topic1-Container');
+
+  			$('#Topic3-Container').hide();
+    		$('#Topic2-Container').hide();
+
+    		SelectedTopic('#Topic1');
+
+    		DeselectedTopic('#Topic2');
+    		DeselectedTopic('#Topic3');
+    	})
+
+    	$("#Topic2").click(()=>{
+    		TopicShow('#Topic2-Container');
+    		
+    		$('#Topic1-Container').hide();
+    		$('#Topic3-Container').hide();
+
+    		SelectedTopic('#Topic2');
+
+    		DeselectedTopic('#Topic1');
+    		DeselectedTopic('#Topic3');
+    	})
+
+    	$("#Topic3").click(()=>{
+			TopicShow('#Topic3-Container');
+
+    		$('#Topic1-Container').hide();
+    		$('#Topic2-Container').hide();
+
+    		SelectedTopic('#Topic3');
+
+    		DeselectedTopic('#Topic1');
+    		DeselectedTopic('#Topic2');
+    	})
+
+    	$('#Home-Link').click(()=>{
+    		$('#Body').load("index.html");
+    	})
+    </script>
+</html>

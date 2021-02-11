@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Healty Life Style</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			@media all and (min-width: 1001px){
+				#Home-Introduction{
+					display: flex;
+					margin: auto;
+					flex-direction: column;
+					width: 1000px;
+					margin: auto;
+				}
+				#Home-Header{
+					width: 100%;
+					margin: auto;
+					justify-content: space-between;
+					align-items: center;
+					z-index: 2;
+				}
+
+			}
+			@media all and (max-width: 1000px){
+				
+				#Home-Header{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin: 0px;					
+				}
+				#Home-Header h1{
+					font-size: 35pt;
+				}
+				#MyBook{
+					display: flex;
+					flex-direction: column;
+				}
+				
+			}
+			@media all and (max-width: 600px){
+				#MyBook{
+					display: block;
+				}
+				#Home-Header{
+					padding: 10px;
+					display: block;
+				}
+				#Home-Header h1{
+					font-size: 20pt;
+				}
+				#Home-Introduction{
+					display: block;
+				}
+				.Home-Book{
+					padding: 10px;	
+				}
+				
+			}
+		</style>
+	</head>
+	<body id="Body">
+		<div id="Home-Header">
+			<div id="Home-Title">
+				<h1>Healty Life Style</h1>
+			</div>
+		</div>
+
+		<div id="Home-Introduction">
+			<p>A healthy lifestyle is a way of living that lowers the risk of being seriously ill or dying early. Not all diseases are preventable, but a large proportion of deaths, particularly those from coronary heart disease and lung cancer, can be avoided. Scientific studies have identified certain types of behaviour that contribute to the development of noncommunicable diseases and early death. Health is not only just about avoiding disease. It is also about physical, mental and social wellbeing. When a healthy lifestyle is adopted, a more positive role model is provided to other people in the family, particularly children. This booklet aims to help readers change their behaviour and improve their health in order to live healthier, longer lives <strong style="color:green;">(WHO)</strong>
+			</p>
+
+			<p>
+				<strong style="color: green;">The World Health Organisation</strong> in 1946 defined health as 'A complete state of mental, physical and social well-being not merely the absence of disease'.		
+			</p>
+
+			<p>
+				<strong style="color: green;">Wikipedia</strong> defines a lifestyle as the way a person lives. This includes patterns of social relations, consumption, entertainment, and dress. A lifestyle typically also reflects an individual's attitudes, values or worldview. A healthy lifestyle is generally characterized as a "balanced life" in which one makes wise choices
+			</p>
+		</div>
+		<div id="MyBook">
+			<div class="Home-Book">
+				<div id="Book1">
+					<img src="image\Book-Cover.png" class="Book-Cover">
+					<h1 class="Title">SPORTS</h1>
+				</div>
+			</div>
+
+			<div class="Home-Book">
+				<div id="Book2">
+					<img src="image\Book-Cover.png" class="Book-Cover">
+					<h1 class="Title">FOOD</h1>
+				</div>
+			</div>
+
+			<div class="Home-Book">
+				<div id="Book3">
+					<img src="image\Book-Cover.png" class="Book-Cover">
+					<h1 class="Title">ACTIVITIES</h1>
+				</div>
+			</div>
+
+			<div id="AboutUs">
+				<h1>About Us</h1>
+			</div>
+		</div>
+	</body>
+
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(document).ready(()=>{
+			$('#Book1').click(()=>{
+				$('#Body').load("Book1.html");
+			});
+
+			$('#Book2').click(()=>{
+				$('#Body').load("Book2.html");
+			});
+
+			$('#Book3').click(()=>{
+				$('#Body').load("Book3.html");
+			})
+
+			$('#AboutUs').click(()=>{
+				$('#Body').load("AboutUs.html");
+			});
+		});
+	</script>
+</html>
